@@ -27,7 +27,7 @@ const pool = mysql.createPool({
 });
 
 app.get('/', function (req, res) {
-   res.send('Hello World');
+   res.send('Hello Mohamed Hesham');
 })
 
 app.post('/SigninWithEmailAndPassword', upload.none(), async function (req, res) {
