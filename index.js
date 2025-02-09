@@ -43,12 +43,12 @@ app.post('/SigninWithEmailAndPassword', upload.none(), async function (req, res)
             `SELECT * FROM TestAdham_User WHERE email = ?`, [email]
         );
 
-        if (result.length === 0) {
-            return {
+        if (result.length == 0) {
+            return res.status(500).json( {
                 response: 'No User with this email',
                 result: null,
                 success: false
-            };
+            });
         }
 
         const user = result[0];
