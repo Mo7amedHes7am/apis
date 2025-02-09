@@ -35,10 +35,8 @@ app.post('/SigninWithEmailAndPassword', upload.none(), async function (req, res)
     const { email, password } = req.body;
 
     try {
-        // Get a connection from the pool
         connection = await pool.getConnection();
 
-        // Query the database
         const [result] = await connection.execute(
             `SELECT * FROM TestAdham_User WHERE email = ?`, [email]
         );
