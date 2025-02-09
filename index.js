@@ -136,7 +136,7 @@ app.post('/SignUpWithEmailAndPassword', upload.none(),    async function (req, r
 
         return res.status(500).json({
             response: "internal server error",
-            result: null,
+            result: "internal server error",
             success: false
         });
     } finally {
