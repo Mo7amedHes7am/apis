@@ -113,7 +113,7 @@ app.post('/SignUpWithEmailAndPassword', upload.none(),    async function (req, r
             name: name,
             phonenumber: phoneNumber,
             email: email,
-            imgurl: imgurl,
+            imgurl: "https://firebasestorage.googleapis.com/v0/b/flocker-rehla.appspot.com/o/defaultdata%2FUser-Profile-PNG.png?alt=media&token=ed70a16d-6918-4734-9fa6-1e278285649a",
         };
         // Respond with success
         return res.status(200).json({
